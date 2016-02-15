@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zee-german/place-my-order.png?branch=master)](https://travis-ci.org/zee-german/place-my-order)
+
 # place-my-order
 
 Welcome to the place-my-order DoneJS application!
