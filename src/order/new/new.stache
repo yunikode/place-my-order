@@ -1,1 +1,11 @@
-<p>{{message}}</p>
+<div class="order-form">
+  <h2>Order here</h2>
+  <bit-tabs tabs-class="nav nav-tabs">
+    <bit-panel title="Lunch menu">
+      This is the lunch menu
+    </bit-panel>
+    <bit-panel title="Dinner menu">
+      This is the dinner menu
+    </bit-panel>
+  </bit-tabs>
+</div>
