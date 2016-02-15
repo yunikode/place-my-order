@@ -17,7 +17,7 @@ Tests can be run with
 
 ```
 donejs test
-``
+```
 
 ## Development mode
 
