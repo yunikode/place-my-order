@@ -10,7 +10,7 @@
           <li class="{{#eq page 'restaurants'}}active{{/eq}}">
             <a href="{{routeUrl page='restaurants'}}">Restaurants</a>
           </li>
-          <li class="{{#eq page 'order-hstory'}}active{{/eq}}">
+          <li class="{{#eq page 'order-history'}}active{{/eq}}">
             <a href="{{routeUrl page='order-history'}}">Order History</a>
           </li>
         </ul>
