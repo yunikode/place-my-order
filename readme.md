@@ -6,7 +6,7 @@ Welcome to the place-my-order DoneJS application!
 
 To install all dependencies, (e.g. after cloning it from a Git repository) run
 
-``
+```
 npm install donejs -g
 npm install
 ```
