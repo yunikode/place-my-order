@@ -1,7 +1,6 @@
-import Component from 'can/component/';
+import Component from 'can/component/component';
 import Map from 'can/map/';
 import 'can/map/define/';
-import './new.less!';
 import template from './new.stache!';
 import Restaurant from 'place-my-order/models/restaurant';
 import Order from 'place-my-order/models/order';

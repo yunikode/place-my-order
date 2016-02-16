@@ -1,9 +1,8 @@
-import can from 'can';
 import superMap from 'can-connect/can/super-map/';
 import tag from 'can-connect/can/tag/';
 import List from 'can/list/';
-import Map from 'can/map';
-import 'can/map/define/define';
+import Map from 'can/map/';
+import 'can/map/define/';
 
 const ItemList = List.extend({}, {
   has: function(item) {
@@ -46,7 +45,7 @@ let Order = Map.extend({
 
 export const connection = superMap({
   url: '/api/orders',
-  idProp: '_id';
+  idProp: '_id',
   Map: Order,
   List: Order.List,
   name: 'orders'
