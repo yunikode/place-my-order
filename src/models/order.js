@@ -3,8 +3,15 @@ import tag from 'can-connect/can/tag/';
 import List from 'can/list/';
 import Map from 'can/map/';
 import 'can/map/define/';
+import io from 'steal-socket.io'
 
-const ItemList = List.extend({}, {
+const socket = io();
+
+socket.on('orders created', order => connection.createInstance(order));
+socket.on('orders updated', order => connection.updateInstance(order));
+socket.on('orders removed', order => connection.destroyInstance(order));
+
+const ItemsList = List.extend({}, {
   has: function(item) {
     return this.indexOf(item) !== -1;
   },
@@ -31,7 +38,8 @@ let Order = Map.extend({
     total: {
       get() {
         let total = 0.0;
-        this.attr('items').forEach(item => total += parseFloat(item.attr('price')));
+        this.attr('items').forEach(item =>
+            total += parseFloat(item.attr('price')));
         return total.toFixed(2);
       }
     }
@@ -51,6 +59,6 @@ export const connection = superMap({
   name: 'orders'
 });
 
-tag('order-model', connection)
+tag('order-model', connection);
 
 export default Order;
